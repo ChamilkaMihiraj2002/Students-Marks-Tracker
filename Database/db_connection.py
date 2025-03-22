@@ -1,15 +1,15 @@
 import mysql.connector
+import sys
 import os
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config import DB_CONFIG
 
 def get_db_connection():
     connection = mysql.connector.connect(
-        host=os.getenv("DB_HOST"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME")
+        host=DB_CONFIG["host"],
+        user=DB_CONFIG["user"],
+        password=DB_CONFIG["password"],
+        database=DB_CONFIG["database"]
     )
     return connection

@@ -1,0 +1,25 @@
+student_marks_tracker/
+│── main.py                 # Entry point of the application
+│── config.py               # Database configuration settings
+│── requirements.txt        # List of dependencies
+│── README.md               # Project documentation
+│
+├── database/
+│   │── db_connection.py    # Handles MySQL connection
+│   │── models.py           # Database models (students, marks, etc.)
+│   └── init_db.py          # Script to initialize the database
+│
+├── ui/
+│   │── __init__.py         # Makes the folder a package
+│   │── main_window.py      # Main UI layout using modern Tkinter
+│   │── add_student.py      # UI for adding students
+│   │── add_marks.py        # UI for adding marks
+│   └── view_results.py     # UI for displaying student marks
+│
+├── controllers/
+│   │── student_controller.py  # Handles logic for student operations
+│   └── marks_controller.py    # Handles logic for marks operations
+│
+└── assets/
+    ├── images/             # Store images/icons for UI
+    └── styles/             # Custom styles for modern Tkinter

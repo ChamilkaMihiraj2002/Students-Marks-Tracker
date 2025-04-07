@@ -3,7 +3,7 @@ import os
 
 # Add the project root directory to sys.path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from Database.models import Subject
+from Models.subject import Subject
 
 class SubjectController:
     """Controller to handle subject operations"""

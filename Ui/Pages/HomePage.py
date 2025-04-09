@@ -23,7 +23,7 @@ class HomePage(BasePage):
         
         # Grid layout for cards
         cards_container.grid_columnconfigure((0, 1, 2), weight=1, uniform="cards")
-        cards_container.grid_rowconfigure(0, weight=1)
+        cards_container.grid_rowconfigure(0, weight=2)
         
         # Create dashboard cards
         self.create_dashboard_card(
@@ -55,30 +55,30 @@ class HomePage(BasePage):
         # Create card with shadow effect
         card = ctk.CTkFrame(
             parent,
-            corner_radius=10,
+            corner_radius=8,  # Reduced corner radius
             fg_color="white", 
             border_width=0
         )
-        card.grid(row=row, column=col, padx=15, pady=15, sticky="nsew")
+        card.grid(row=row, column=col, padx=10, pady=10, sticky="nsew")  # Reduced padding
         
         # Title
         title_label = ctk.CTkLabel(
             card,
             text=title,
-            font=ctk.CTkFont(size=14),
+            font=ctk.CTkFont(size=12),  # Reduced font size
             text_color="#666666"
         )
-        title_label.pack(anchor="w", padx=20, pady=(25, 5))
+        title_label.pack(anchor="w", padx=15, pady=(15, 5))  # Reduced padding
         
         # Value
         value_label = ctk.CTkLabel(
             card,
             text=value,
-            font=ctk.CTkFont(size=40, weight="bold"),
+            font=ctk.CTkFont(size=30, weight="bold"),  # Reduced font size
             text_color="#333333"
         )
-        value_label.pack(anchor="w", padx=20, pady=(0, 20))
+        value_label.pack(anchor="w", padx=15, pady=(0, 15))  # Reduced padding
         
         # Accent line at bottom
-        accent = ctk.CTkFrame(card, height=6, fg_color=accent_color, corner_radius=3)
-        accent.pack(fill="x", padx=20, pady=(10, 20))
+        accent = ctk.CTkFrame(card, height=4, fg_color=accent_color, corner_radius=2)  # Reduced height
+        accent.pack(fill="x", padx=15, pady=(5, 15))  # Reduced padding

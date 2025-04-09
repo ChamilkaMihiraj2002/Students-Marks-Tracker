@@ -39,6 +39,7 @@ class StudentDetails(BasePage):
             placeholder_text="Search students...",
             width=300,
             height=40,
+            fg_color="white",
             corner_radius=8
         )
         search_entry.pack(side="left", padx=(0, 10))
@@ -65,7 +66,7 @@ class StudentDetails(BasePage):
         add_button.pack(side="right")
         
         # Student list in a table-like format
-        table_frame = ctk.CTkFrame(parent, fg_color="white", corner_radius=10)
+        table_frame = ctk.CTkFrame(parent, fg_color="#d3d5db", corner_radius=10)
         table_frame.pack(fill="both", expand=True)
         
         # Table header
@@ -111,7 +112,7 @@ class StudentDetails(BasePage):
         # Add sample data rows
         for i, student in enumerate(sample_data):
             # Row background (alternating for better readability)
-            row_bg = "#f9f9f9" if i % 2 == 0 else "white"
+            row_bg = "#d3d5db" if i % 2 == 0 else "#d3d5db"
             
             # Student ID
             id_label = ctk.CTkLabel(

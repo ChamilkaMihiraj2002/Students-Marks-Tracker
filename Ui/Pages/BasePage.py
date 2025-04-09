@@ -48,7 +48,7 @@ class BasePage(ctk.CTkFrame):
         self.create_navigation()
         
         # === MAIN CONTENT AREA ===
-        self.content = ctk.CTkFrame(self, fg_color="#f5f5f5", corner_radius=0)
+        self.content = ctk.CTkFrame(self, fg_color="white", corner_radius=0)
         self.content.grid(row=0, column=1, sticky="nsew", padx=(0, 0))
     
     def create_navigation(self):
